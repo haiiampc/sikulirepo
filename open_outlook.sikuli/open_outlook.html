@@ -1,0 +1,117 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>open_outlook.sikuli</h2> <a href="open_outlook.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="cmt"># Click on Start Button</span>
+<span class="skw">click</span>(<img src="1553175784070.png" />)
+
+<span class="cmt"># Sleep for 1 Sec - to match delay - adjust this as needed</span>
+<span class="skw">wait</span>(<span class="dig">1</span>)
+<span class="skw">type</span>(<span class="str">"outlook"</span>)
+
+<span class="cmt">#below exists screen - kept as manual gate</span>
+<span class="cmt">#if below screen exists on screen, then only next step (click new mail)</span>
+<span class="cmt">#will be handy, if outlook opens slow on some of the machines</span>
+
+<span class="cmt"># Press Enter key to open outlook</span>
+<span class="skw">type</span>(Key.ENTER)
+<span class="skw">wait</span>(<span class="dig">1</span>)
+<span class="cmt">#App.focus('Outlook') - need proper syntax</span>
+
+<span class="cmt">#New mail via clicking button</span>
+<span class="cmt">#click("1553178120664.png")</span>
+
+<span class="cmt"># New mail via short cut key</span>
+<span class="skw">type</span>(<span class="str">"n"</span>,KEY_CTRL)
+<span class="skw">wait</span>(<span class="dig">1</span>)
+
+<span class="skw">click</span>(Pattern(<img src="1553181549170.png" />).targetOffset(-<span class="dig">72</span>,-<span class="dig">31</span>))
+
+
+<span class="skw">type</span>(<span class="str">"py266t@att.com"</span>)
+
+<span class="skw">click</span>(Pattern(<img src="1553235302364.png" />).targetOffset(-<span class="dig">61</span>,<span class="dig">5</span>))
+
+<span class="skw">type</span>(<span class="str">"Test Mail to Purna.Yeluri"</span>)
+
+<span class="skw">click</span>(Pattern(<img src="1553181385410.png" />).targetOffset(<span class="dig">0</span>,-<span class="dig">7</span>))
+
+<span class="cmt"># Other Use Cases</span>
+<span class="cmt"># Like Open Portal, Download a file, Ex: excel file, Sort, Select few rows, Create Graph, Copy, Open Outlook, New mail - send mail</span>
+
+<span class="cmt">#References</span>
+<span class="cmt"># https://sikulix-2014.readthedocs.io/en/latest/index.html</span>
+<span class="cmt"># https://answers.launchpad.net/sikuli</span>
+<span class="cmt"># https://www.youtube.com/watch?v=rrVHoYBknGo</span>
+
+</pre>
+</body>
+</html>
